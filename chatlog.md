@@ -3,7 +3,7 @@
 #### User
 
 Write a python program that implements a hangman game that I can copy and paste into a .py file and run.
-#### #### ChatGPT
+#### ChatGPT
 Here's a simple Hangman game implementation in Python. You can copy and paste this code into a .py file and run it:
 
 ```python
@@ -148,9 +148,9 @@ if __name__ == '__main__':
 ```
 
 Save this code in a .py file and execute it with Python to play the Hangman game.
-#### #### User
+#### User
 Can you modify it to create a real GUI instead of just text in the console
-#### #### ChatGPT
+#### ChatGPT
 Certainly! Here's a modified version of the Hangman game using the Tkinter library to create a simple graphical user interface (GUI) for the game. Make sure you have the Tkinter library installed before running this code.
 
 ```python
@@ -227,9 +227,9 @@ if __name__ == '__main__':
 ```
 
 This code creates a simple GUI for the Hangman game using Tkinter. Copy and paste the code into a .py file and run it with Python to play the game in the new GUI.
-#### #### User
+#### User
 After winning it doesn't allow you to play again
-#### #### ChatGPT
+#### ChatGPT
 You're right! I'll modify the code to add a "Play Again" button that resets the game after a win or loss. Here's the updated version of the code:
 
 ```python
@@ -321,9 +321,9 @@ if __name__ == '__main__':
 ```
 
 This updated version adds a
-#### #### User
+#### User
 Can you update it to get the list of words from a real dictionary
-#### #### ChatGPT
+#### ChatGPT
 To use a real dictionary for the word list, you can download a list of English words as a text file and read the words from that file. One such list is available at the following GitHub repository:
 
 https://github.com/dwyl/english-words
@@ -385,9 +385,9 @@ if __name__ == '__main__':
 ```
 
 This modification replaces the hardcoded `self.words` list with a call to `self.load_words()`, which reads the words from the `words_alpha.txt` file. Make sure you have the `words_alpha.txt` file in the same directory as your Python script before running the modified code.
-#### #### User
+#### User
 continue
-#### #### ChatGPT
+#### ChatGPT
 Here's the complete modified Hangman game code that reads words from the `words_alpha.txt` file:
 
 ```python
@@ -481,9 +481,9 @@ if __name__ == '__main__':
 ```
 
 This code contains the full Hangman game with a GUI using Tkinter, reading words from
-#### #### User
+#### User
 Can you update it to show a score, best score, tries remaining, letters chosen so far and anything else that could be useful. Please include the complete implentation, do not put comments saying same as before.
-#### #### ChatGPT
+#### ChatGPT
 Here's the complete implementation of the Hangman game with a GUI using Tkinter, which includes the requested features: score, best score, tries remaining, and letters chosen so far.
 
 ```python
@@ -564,9 +564,9 @@ class Hangman:
                 self.word_completion = ''.join(word_as_list)
                 self.display_label.config(text=self.word_completion)
                
-#### #### User
+#### User
 continue
-#### #### ChatGPT
+#### ChatGPT
                 self.score += 1
                 self.score_label.config(text='Score: ' + str(self.score) + ' | Best Score: ' + str(self.best_score))
 
@@ -609,7 +609,7 @@ This complete implementation of the Hangman game with a GUI includes the followi
 4. Listing the letters chosen so far.
 
 All requested features have been implemented, and the game is fully functional. Make sure you have the `words_alpha.txt` file in the same directory as your Python script before running the modified code.
-#### #### User
+#### User
 This is what I have, doesn't seem to work, can you fix it.
 import random
 import tkinter as tk
@@ -725,7 +725,7 @@ if __name__ == 'main':
     root = tk.Tk()
     hangman_gui = Hangman(root)
     root.mainloop()
-#### #### ChatGPT
+#### ChatGPT
 It seems that the main issue in your code is that the `play_again` function has incorrect indentation and is not part of the `Hangman` class. Also, the `if __name__ == 'main':` line should be `if __name__ == '__main__':`. I've fixed these issues in the code below:
 
 ```python
@@ -804,9 +804,9 @@ class Hangman:
                 word_as_list = list(self.word_completion)
                 indices = [i for i, letter in enumerate(self.word) if letter == guess]
                 for index
-#### #### User
+#### User
 continue to display the code, repeat the last line
-#### #### ChatGPT
+#### ChatGPT
                 for index in indices:
                     word_as_list[index] = guess
                 self.word_completion = ''.join(word_as_list)
@@ -847,9 +847,9 @@ if __name__ == '__main__':
 ```
 
 The code has been fixed to properly indent the `play_again` function as part of the `Hangman` class, and
-#### #### User
+#### User
 How can I make the whole UI wider so it doesn't keep changing its size
-#### #### ChatGPT
+#### ChatGPT
 You can set a fixed width for the main window of your application and prevent it from resizing by setting the `minsize` and `maxsize` to the same values. You can also set a fixed width for the labels and entry widgets. Here's the modified code with a fixed width:
 
 ```python
@@ -914,9 +914,9 @@ if __name__ == '__main__':
 ```
 
 In this code, a fixed window width of 400 pixels is set. Also, a fixed width of 50 characters is set for the labels, and a width of 25 characters is set for the entry widget. These changes will prevent the UI from changing its size as the content changes.
-#### #### User
+#### User
 How can I add a bit of space between the letter indicators, it's hard to tell how many letters there are in the word sometimes
-#### #### ChatGPT
+#### ChatGPT
 You can modify the `reset_game` method to add a space between each letter indicator (underscore) in the `word_completion` string. Here's the modified `reset_game` method:
 
 ```python
@@ -930,9 +930,9 @@ def reset_game(self):
 ```
 
 Now, there will be a space between each underscore in the `word_completion` string, making it easier to count the number of letters in the word. The rest of the code remains the same.
-#### #### User
+#### User
 How do I keep the letters chosen in the order they were chosen
-#### #### ChatGPT
+#### ChatGPT
 Instead of using a `set` for the `guessed_letters`, you can use a `list` to maintain the order of the chosen letters. Modify the `reset_game` method and the `submit_guess` method to make this change:
 
 ```python
@@ -962,7 +962,7 @@ def submit_guess(self):
 ```
 
 Now, the `guessed_letters` list will maintain the order in which the letters were chosen.
-#### #### User
+#### User
 Exception in Tkinter callback
 Traceback (most recent call last):
   File "C:\Users\cvonn\AppData\Local\Programs\Python\Python310\lib\tkinter\__init__.py", line 1921, in __call__
@@ -970,7 +970,7 @@ Traceback (most recent call last):
   File "C:\Users\cvonn\PycharmProjects\Hangman\main.py", line 83, in submit_guess
     self.guessed_letters.add(guess)
 AttributeError: 'list' object has no attribute 'add'
-#### #### ChatGPT
+#### ChatGPT
 Apologies for the confusion. It seems I missed changing the `add()` method to `append()` in the `submit_guess` method for the case when the guessed letter is in the word. Here's the corrected `submit_guess` method:
 
 ```python
@@ -1004,9 +1004,9 @@ def submit_guess(self):
 ```
 
 Now, the `append()` method is used in both cases where a letter is added to the `guessed_letters` list.
-#### #### User
+#### User
 Seems to always say "not a valid guess" now
-#### #### ChatGPT
+#### ChatGPT
 Apologies for the oversight. The "Not a valid guess" message is shown because it's outside the conditions checking for the guessed letter. You should move it inside the `else` block that checks if the guessed letter is not in the word, and use an `elif` statement instead. Here's the corrected `submit_guess` method:
 
 ```python
@@ -1041,9 +1041,9 @@ def submit_guess(self):
 ```
 
 Now, the "Not a valid guess" message will only be shown when the input doesn't meet the conditions of being a single alphabetical character.
-#### #### User
+#### User
 It is not adding letters in the word to the chosen letter list
-#### #### ChatGPT
+#### ChatGPT
 I apologize for the oversight. The code to update the `chosen_letters_label` is missing in the case where the guessed letter is in the word. Add the following two lines after the `self.guessed_letters.append(guess)` line in the `else` block:
 
 ```python
@@ -1085,9 +1085,9 @@ def submit_guess(self):
 ```
 
 Now, the chosen letter list will be updated correctly when the guessed letter is in the word.
-#### #### User
+#### User
 I got tries remaining negative values
-#### #### ChatGPT
+#### ChatGPT
 To fix this issue, you can add a condition to check if the remaining tries are greater than zero before proceeding with the guessing process. Here's the updated `submit_guess` method with this condition added:
 
 ```python
@@ -1118,9 +1118,9 @@ def submit_guess(self):
 ```
 
 Now, if the remaining tries are zero or negative, the game will not allow further guesses and will display a message that the user has run out of tries.
-#### #### User
+#### User
 I keep getting bugs can you try rewriting the whole code without issues and include all the features discussed thus far
-#### #### ChatGPT
+#### ChatGPT
 I apologize for the issues you've encountered. Here's the complete code for the Hangman game, incorporating all the features discussed thus far:
 
 ```python
@@ -1203,9 +1203,9 @@ class Hangman:
                 self.result_label.config(text='Good job, ' + guess + ' is in the word!')
                 self.guessed_letters.append(guess)
                 self.chosen_letters_label.config(text='Chosen letters: '
-#### #### User
+#### User
 Continue with the rest of the code
-#### #### ChatGPT
+#### ChatGPT
 I apologize for the incomplete code in my previous response. Here's the continuation and completion of the Hangman game code:
 
 ```python
@@ -1251,13 +1251,13 @@ if __name__ == '__main__':
 ```
 
 This is the complete Hangman game code with all the requested features, including maintaining the order of chosen letters, spacing between letter indicators, and preventing the remaining tries from going into negative values.
-#### #### User
+#### User
   File "C:\Users\cvonn\PycharmProjects\Hangman\main.py", line 118, in <module>
     hangman_gui = Hangman(root)
   File "C:\Users\cvonn\PycharmProjects\Hangman\main.py", line 43, in __init__
     self.play_again_button = tk.Button(master, text='Play Again', command=self.play_again, state=tk.DISABLED)
 AttributeError: 'Hangman' object has no attribute 'play_again'
-#### #### ChatGPT
+#### ChatGPT
 I apologize for the oversight in the code. There is an indentation error in the `play_again` function definition. Here's the corrected code:
 
 ```python
@@ -1273,9 +1273,9 @@ I apologize for the oversight in the code. There is an indentation error in the 
 ```
 
 Make sure that the `play_again` function is properly indented and is a method of the `Hangman` class. Once you fix the indentation, the error should be resolved, and the game should work as intended.
-#### #### User
+#### User
 It isn't keeping the whole UI wider so it doesn't keep changing its size, like it did earlier, what do i change to make this work again
-#### #### ChatGPT
+#### ChatGPT
 My apologies for missing that part. You can set a minimum window size for the tkinter window to keep the UI from resizing. Add the following line after creating the `root` object in the `__main__` block:
 
 ```python
@@ -1293,9 +1293,9 @@ if __name__ == '__main__':
 ```
 
 With this change, the UI should maintain a consistent size and not resize as you play the game.
-#### #### User
+#### User
 How do I center the window on screen?
-#### #### ChatGPT
+#### ChatGPT
 To center the window on the screen, you can calculate the screen's center coordinates and adjust the window position accordingly. Add the following lines of code right after creating the `root` object and before creating the `hangman_gui` object in the `__main__` block:
 
 ```python
@@ -1334,9 +1334,9 @@ if __name__ == '__main__':
 ```
 
 This code calculates the screen dimensions and the desired window dimensions, then centers the window on the screen. Adjust the `window_width` and `window_height` values as needed for your desired window dimensions.
-#### #### User
+#### User
 The play again button is not visible. It is visible if I resize the height manually.
-#### #### ChatGPT
+#### ChatGPT
 It seems like the height of the window is not enough to show the Play Again button. You can try increasing the minimum height of the window to fix this issue. Update the following line in the `__main__` block:
 
 ```python
