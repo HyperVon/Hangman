@@ -27,7 +27,7 @@ A simple, text-based Hangman game with a graphical user interface (GUI) created 
 6. To play again, click the "Play Again" button.
 
 ## Sample Game Play Video
-https://www.youtube.com/watch?v=O4R3yaCzSOE
+https://github.com/HyperVon/Hangman/blob/9cea8446b301e5f177b37f43a033efc6722d13f4/Hangman%20Game.mp4
 
 ## License
 
