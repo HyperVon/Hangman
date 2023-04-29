@@ -31,7 +31,7 @@ A simple, text-based Hangman game with a graphical user interface (GUI) created 
 https://user-images.githubusercontent.com/110712044/235281405-2ed2d5b3-8d65-465a-9437-09ee44dac60a.mp4
 
 # Chat Log
-See the chatlog.md for a log of the full conversation with ChatGPT used to create this.
+See the chatlog.md file for a log of the full conversation with ChatGPT used to create this.
 
 
 ## License
