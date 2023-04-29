@@ -26,6 +26,9 @@ A simple, text-based Hangman game with a graphical user interface (GUI) created 
    - The player runs out of tries.
 6. To play again, click the "Play Again" button.
 
+## Sample Game Play Video
+https://www.youtube.com/watch?v=O4R3yaCzSOE
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
